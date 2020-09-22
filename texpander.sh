@@ -10,12 +10,12 @@ pid=$(xdotool getwindowfocus getwindowpid)
 proc_name=$(cat /proc/$pid/comm)
 
 # If ~/.texpander directory does not exist, create it
-if [ ! -d ${HOME}/.texpander ]; then
-    mkdir ${HOME}/.texpander
+if [ ! -d ${HOME}/.config/texpander/.texpander ]; then
+    mkdir ${HOME}/.config/texpander/.texpander
 fi
 
-# Store base directory path, expand complete path using HOME environemtn variable
-base_dir=$(realpath "${HOME}/.texpander")
+# Store base directory path, expand complete path using HOME environment variable
+base_dir=$(realpath "${HOME}/.config/texpander/.texpander")
 
 # Set globstar shell option (turn on) ** for filename matching glob patterns on subdirectories of ~/.texpander
 shopt -s globstar
